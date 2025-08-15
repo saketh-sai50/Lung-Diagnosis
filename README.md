@@ -8,17 +8,17 @@ This project focuses on building a deep learning pipeline to detect lung cancer 
 
 - Classify CT scan images as **Benign**, **Malignant**, or **Normal**
 - Perform **tumor segmentation** using U-Net
-- Apply **Grad-CAM** and **SHAP** for explainable AI (XAI)
+- Apply **Grad-CAM** for explainable AI (XAI)
 - Generate visual diagnostic reports to support clinical decisions
 
 ---
 
  Models Used
 
-- ✅ **CNN** for multi-class classification (3 classes)
+- ✅ **Vision Transformer** for multi-class classification (3 classes)
 - ✅ **U-Net** for segmentation of tumor regions
 - ✅ **Grad-CAM** for class activation heatmaps
-- ✅ **SHAP** for pixel-wise feature contribution explanations
+  
 
 ---
 
@@ -42,7 +42,7 @@ This project focuses on building a deep learning pipeline to detect lung cancer 
 - Keras / TensorFlow
 - OpenCV
 - NumPy, Pandas, Matplotlib
-- SHAP, Grad-CAM, Scikit-learn
+- Grad-CAM, Scikit-learn
 - Flask (optional for web interface)
 
 ---
@@ -55,9 +55,10 @@ This project focuses on building a deep learning pipeline to detect lung cancer 
 - Applied data augmentation for generalization
 
 ### 🧠 2. Classification (CNN)
-- Trained CNN model on CT image data
-- Used softmax output layer for 3-class prediction
-- Evaluated using accuracy, precision, recall, F1-score
+- Trained a Vision Transformer (ViT) model on CT image data for 3-class classification.
+- Applied a softmax output layer for multi-class prediction.
+- Achieved improved feature representation by leveraging transformer-based attention mechanisms.
+- Evaluated using accuracy, precision, recall, and F1-score
 
 ### 🧬 3. Segmentation (U-Net)
 - Trained U-Net model on binary lung/tumor masks
@@ -65,7 +66,6 @@ This project focuses on building a deep learning pipeline to detect lung cancer 
 
 ### 🔎 4. Explainability
 - Applied **Grad-CAM** to CNN to generate activation heatmaps
-- Used **SHAP** for per-pixel influence explanation
 - Combined outputs into downloadable diagnostic reports
 
 ---
